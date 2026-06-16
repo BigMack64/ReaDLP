@@ -1,3 +1,68 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<index version="1" name="ReaDLP">
-</index>
+<?xml version="1.0" encoding="utf-8"?>
+<index version="1" name="ReaDLP" commit="ddabdac424960a8f504a3490db9ef27aee6b3c5f">
+<category name="Scripts/Downloads"><reapack name="ReaDLP.lua" type="script" desc="ReaDLP - yt-dlp audio downloader for REAPER"><metadata><description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 ReaDLP\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 ReaDLP is a ReaImGui tool for downloading organized sample-digging audio with yt-dlp and ffmpeg. It supports single URLs, playlists, metadata-based filenames, saved field histories, logs, diagnostics, and optional insertion onto the selected REAPER track.\par}
+}
+]]></description></metadata><version name="1.3.0" author="ReaDLP contributors" time="2026-06-16T04:21:14Z"><changelog><![CDATA[Prepared the public ReaPack package layout.
+Added a ReaPack metadata header.
+Reworked the main UI into tabs for a smaller, cleaner window.]]></changelog><source main="main">https://github.com/BigMack64/ReaDLP/raw/ddabdac424960a8f504a3490db9ef27aee6b3c5f/Scripts/Downloads/ReaDLP.lua</source></version></reapack></category><metadata><description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 ReaDLP\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 ReaDLP is a Windows-first ReaScript/ReaImGui tool for downloading organized sample-digging audio inside REAPER with {\f1 yt-dlp.exe} and {\f1 ffmpeg.exe}.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 It is designed for YouTube, Samplette, and similar sample discovery workflows where musical metadata matters while downloading.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel1 \b \fs32 Requirements\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Windows 10/11\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab REAPER 7.x\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab ReaImGui from ReaPack\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab {\f1 yt-dlp.exe}\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab {\f1 ffmpeg.exe}\sa180\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel1 \b \fs32 Features\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Single URL audio downloads.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Playlist URL downloads into playlist-title subfolders.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Queue mode with one URL per line.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Optional insertion of downloaded audio onto the selected REAPER track.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Queue insertion into fixed lanes when insertion is enabled.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Metadata fields for Style, Region, Channel, Artist, Year, Key, and Tempo.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Searchable saved histories for metadata fields.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Saved download folders.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Background downloads without distracting command windows.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Copyable logs and diagnostics for troubleshooting.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Local settings under {\f1 REAPER resource path\\Data\\ReaDLP\\settings.ini}.\sa180\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel1 \b \fs32 ReaPack Package Layout\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 The package entry point is:\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \f1 Scripts/Downloads/ReaDLP.lua\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 ReaPack indexes package files only when they live in a subfolder. The {\f1 Scripts/Downloads} path is intentional: it becomes the package category shown in ReaPack.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 The public package currently uses one main Lua file for maximum install compatibility. ReaPack can install multiple files with {\f1 @provides}, but helper libraries are not split out yet.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel1 \b \fs32 Installation From ReaPack\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 In REAPER:\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 1.\tx360\tab Open {\f1 Extensions > ReaPack > Import repositories...}.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 2.\tx360\tab Paste this URL:\sa180\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \f1 https://raw.githubusercontent.com/BigMack64/ReaDLP/main/index.xml\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 3.\tx360\tab Synchronize packages.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 4.\tx360\tab Install {\f1 ReaDLP.lua} from the {\f1 Scripts/Downloads} category.\sa180\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel1 \b \fs32 Installation For Local Testing\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 1.\tx360\tab Install ReaImGui from ReaPack.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 2.\tx360\tab Put {\f1 yt-dlp.exe} and {\f1 ffmpeg.exe} somewhere ReaDLP can find them:\par}
+{\pard \ql \f0 \sa0 \li720 \fi-360 \endash \tx360\tab next to the script,\par}
+{\pard \ql \f0 \sa0 \li720 \fi-360 \endash \tx360\tab under the REAPER resource path,\par}
+{\pard \ql \f0 \sa0 \li720 \fi-360 \endash \tx360\tab or on {\f1 PATH}.\sa180\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 3.\tx360\tab In REAPER, open the Actions window.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 4.\tx360\tab Load {\f1 Scripts/Downloads/ReaDLP.lua}.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 5.\tx360\tab Run the action.\sa180\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel1 \b \fs32 ReaPack Repository Publishing\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 This repository uses GitHub Actions to validate the package and generate {\f1 index.xml} with {\f1 reapack-index} after pushes to {\f1 main}.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 For manual local validation:\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \f1 gem install reapack-index\line
+reapack-index --check "C:\\path\\to\\ReaDLP Pub Release"\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 The ReaPack import URL is:\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \f1 https://raw.githubusercontent.com/BigMack64/ReaDLP/main/index.xml\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel1 \b \fs32 Notes\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 ReaDLP does not bundle yt-dlp or ffmpeg. This avoids shipping large third-party binaries and keeps the ReaPack package focused on the REAPER script.\par}
+}
+]]></description></metadata></index>
