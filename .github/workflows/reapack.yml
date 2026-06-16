@@ -1,0 +1,47 @@
+name: ReaPack
+
+on:
+  push:
+    branches:
+      - master
+      - main
+  pull_request:
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+
+      - name: Install pandoc
+        run: sudo apt-get update && sudo apt-get install -y pandoc
+
+      - name: Install reapack-index
+        run: gem install reapack-index
+
+      - name: Validate ReaPack packages
+        run: reapack-index --check .
+
+      - name: Generate index
+        if: github.event_name == 'push'
+        run: reapack-index --scan --no-commit --name "ReaDLP" .
+
+      - name: Commit generated index
+        if: github.event_name == 'push'
+        run: |
+          if ! git diff --quiet -- index.xml; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add index.xml
+            git commit -m "index: update ReaPack index [ci skip]"
+            git push
+          fi
