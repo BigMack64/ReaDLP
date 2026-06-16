@@ -1,11 +1,12 @@
 -- @description ReaDLP - yt-dlp audio downloader for REAPER
--- @version 1.3.0
+-- @version 1.3.1
 -- @author ReaDLP contributors
 -- @about
 --   # ReaDLP
 --   ReaDLP is a ReaImGui tool for downloading organized sample-digging audio with yt-dlp and ffmpeg.
 --   It supports single URLs, playlists, metadata-based filenames, saved field histories, logs, diagnostics, and optional insertion onto the selected REAPER track.
 -- @changelog
+--   Updated public package metadata and generic example paths.
 --   Prepared the public ReaPack package layout.
 --   Added a ReaPack metadata header.
 --   Reworked the main UI into tabs for a smaller, cleaner window.

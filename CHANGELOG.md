@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.1
+
+- Updated public package metadata.
+- Replaced personal quick-folder examples with generic examples.
+- Kept the same tested MVP downloader behavior.
+
 ## 1.3.0
 
 - Prepared a public ReaPack-ready package layout.
