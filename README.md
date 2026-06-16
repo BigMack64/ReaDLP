@@ -46,7 +46,7 @@ In REAPER:
 2. Paste this URL:
 
 ```text
-https://raw.githubusercontent.com/BigMack64/ReaDLP/main/index.xml
+https://github.com/BigMack64/ReaDLP/raw/refs/heads/main/index.xml
 ```
 
 3. Synchronize packages.
@@ -77,7 +77,7 @@ reapack-index --check "C:\path\to\ReaDLP Pub Release"
 The ReaPack import URL is:
 
 ```text
-https://raw.githubusercontent.com/BigMack64/ReaDLP/main/index.xml
+https://github.com/BigMack64/ReaDLP/raw/refs/heads/main/index.xml
 ```
 
 ## Notes
