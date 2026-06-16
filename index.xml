@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <index version="1" name="ReaDLP" commit="ddabdac424960a8f504a3490db9ef27aee6b3c5f">
-<category name="Scripts/Downloads"><reapack name="ReaDLP.lua" type="script" desc="ReaDLP - yt-dlp audio downloader for REAPER"><metadata><description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+  <category name="Scripts/Downloads">
+    <reapack name="ReaDLP.lua" type="script" desc="ReaDLP - yt-dlp audio downloader for REAPER">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
 {\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 ReaDLP\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 ReaDLP is a ReaImGui tool for downloading organized sample-digging audio with yt-dlp and ffmpeg. It supports single URLs, playlists, metadata-based filenames, saved field histories, logs, diagnostics, and optional insertion onto the selected REAPER track.\par}
 }
-]]></description></metadata><version name="1.3.0" author="ReaDLP contributors" time="2026-06-16T04:21:14Z"><changelog><![CDATA[Prepared the public ReaPack package layout.
+]]></description>
+      </metadata>
+      <version name="1.3.0" author="ReaDLP contributors" time="2026-06-16T04:21:14Z">
+        <changelog><![CDATA[Prepared the public ReaPack package layout.
 Added a ReaPack metadata header.
-Reworked the main UI into tabs for a smaller, cleaner window.]]></changelog><source main="main">https://github.com/BigMack64/ReaDLP/raw/ddabdac424960a8f504a3490db9ef27aee6b3c5f/Scripts/Downloads/ReaDLP.lua</source></version></reapack></category><metadata><description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+Reworked the main UI into tabs for a smaller, cleaner window.]]></changelog>
+        <source main="main">https://github.com/BigMack64/ReaDLP/raw/ddabdac424960a8f504a3490db9ef27aee6b3c5f/Scripts/Downloads/ReaDLP.lua</source>
+      </version>
+    </reapack>
+  </category>
+  <metadata>
+    <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
@@ -43,7 +55,7 @@ Reworked the main UI into tabs for a smaller, cleaner window.]]></changelog><sou
 {\pard \ql \f0 \sa180 \li0 \fi0 In REAPER:\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 1.\tx360\tab Open {\f1 Extensions > ReaPack > Import repositories...}.\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 2.\tx360\tab Paste this URL:\sa180\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 \f1 https://raw.githubusercontent.com/BigMack64/ReaDLP/main/index.xml\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \f1 https://github.com/BigMack64/ReaDLP/raw/refs/heads/main/index.xml\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 3.\tx360\tab Synchronize packages.\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 4.\tx360\tab Install {\f1 ReaDLP.lua} from the {\f1 Scripts/Downloads} category.\sa180\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel1 \b \fs32 Installation For Local Testing\par}
@@ -61,8 +73,10 @@ Reworked the main UI into tabs for a smaller, cleaner window.]]></changelog><sou
 {\pard \ql \f0 \sa180 \li0 \fi0 \f1 gem install reapack-index\line
 reapack-index --check "C:\\path\\to\\ReaDLP Pub Release"\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 The ReaPack import URL is:\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 \f1 https://raw.githubusercontent.com/BigMack64/ReaDLP/main/index.xml\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \f1 https://github.com/BigMack64/ReaDLP/raw/refs/heads/main/index.xml\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel1 \b \fs32 Notes\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 ReaDLP does not bundle yt-dlp or ffmpeg. This avoids shipping large third-party binaries and keeps the ReaPack package focused on the REAPER script.\par}
 }
-]]></description></metadata></index>
+]]></description>
+  </metadata>
+</index>
